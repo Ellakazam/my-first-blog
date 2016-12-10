@@ -8,17 +8,17 @@
         <h1>Post one</h1>
       </div>
 
+  {% for post in posts %}
       <div>
-        <h2>Post two</h2>
+          <p>published: {{ post.published_date }}</p>
+          <h1><a href="">{{ post.title }}</a></h1>
+          <p>{{ post.text|linebreaksbr }}</p>
       </div>
-
-      <div>
-        <h3>Post three</h3>
-      </div>
+  {% endfor %}
 
       <div>
         <p>Richter City Roller Derby (RCRD) is Wellington’s all female, flat track roller derby league. Established in 2007 by a handful of girls with a vision, Richter City introduced the growing sport of Roller Derby to the country’s capital. We are a non profit, skater owned and operated league. In 2013 Richter City became a fully qualified member of the international organization governing the sport of women’s flat track derby, the Women’s Flat Track Derby Association (WFTDA).</p>
         <p>It works!</p>
-      </div>  
+      </div>
     </body>
 </html>
